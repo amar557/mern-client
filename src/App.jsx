@@ -13,7 +13,6 @@ import Users from "./AdminPages/Users";
 import Contacts from "./AdminPages/Contacts";
 import Dashboard from "./AdminPages/Dashboard";
 import UpdateForm from "./AdminPages/UpdateForm";
-import UpdateData from "./AdminPages/UpdateData";
 import { useContext } from "react";
 import { GlobalFunctions } from "./Context/context";
 

@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useContext, useEffect, useState } from "react";
 import { GlobalFunctions } from "../Context/context";
@@ -12,16 +12,12 @@ const navdata = [
 ];
 
 function Navbar() {
-  const { userToken, Logout } = useContext(GlobalFunctions);
+  const { userToken, Logout, curUser } = useContext(GlobalFunctions);
   const [isOpen, setIsOpen] = useState(true);
-  const navigate = useNavigate();
-  // const { Logout } = useContext(GlobalFunctions);
 
   useEffect(() => {
     window.addEventListener("resize", function () {
       if (window.innerWidth >= 768) {
-        // console.log(window.innerWidth);
-        console.log("barh gaya");
         setIsOpen(true);
       } else {
         setIsOpen(false);
@@ -64,6 +60,13 @@ function Navbar() {
           <li className="capitalize text-sm ">
             <NavLink to="/login" className="relative">
               login
+            </NavLink>
+          </li>
+        )}
+        {curUser.isAdmin && userToken && (
+          <li className="capitalize text-sm ">
+            <NavLink to="/admin" className="relative">
+              admin panel
             </NavLink>
           </li>
         )}

@@ -9,6 +9,7 @@ function Contact() {
     let name = e.target.name;
     let value = e.target.value;
     setMessData({ ...messData, [name]: value });
+    console.log(curUser);
   }
   const [userExist, setUserExist] = useState(true);
   useEffect(() => {

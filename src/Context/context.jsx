@@ -21,7 +21,6 @@ function Context({ children }) {
     });
     const toJson = await d.json();
     setServices(toJson.servicesData);
-    console.log(toJson.servicesData);
   }
 
   useEffect(() => {

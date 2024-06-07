@@ -1,5 +1,5 @@
 function About() {
-  return <div>about</div>;
+  return <div className="min-h-[80vh]">about</div>;
 }
 
 export default About;
