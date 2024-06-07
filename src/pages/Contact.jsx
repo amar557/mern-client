@@ -17,6 +17,7 @@ function Contact() {
       messData.username = curUser.username;
       messData.email = curUser.email;
       setUserExist(false);
+      console.log(curUser);
     }
   }, [curUser, messData, userExist]);
 

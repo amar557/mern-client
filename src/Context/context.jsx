@@ -12,7 +12,6 @@ function Context({ children }) {
   function saveInLocalStrg(token) {
     localStorage.setItem("token", token);
     setUserToken(token);
-    // console.log(token);
   }
 
   async function servicesData() {
@@ -68,6 +67,7 @@ function Context({ children }) {
   function Logout() {
     localStorage.removeItem("token");
     setUserToken("");
+    setCurUser("");
   }
   return (
     <GlobalFunctions.Provider
