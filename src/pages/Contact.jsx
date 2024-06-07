@@ -3,6 +3,7 @@ import img from "../assets/registeration-img.jpg";
 import { GlobalFunctions } from "../Context/context";
 function Contact() {
   const [messData, setMessData] = useState({});
+  const [userExist, setUserExist] = useState(true);
   const { curUser, port } = useContext(GlobalFunctions);
 
   function OndataChange(e) {
@@ -11,7 +12,6 @@ function Contact() {
     setMessData({ ...messData, [name]: value });
     console.log(curUser);
   }
-  const [userExist, setUserExist] = useState(true);
   useEffect(() => {
     if (userExist && curUser) {
       messData.username = curUser.username;
@@ -44,7 +44,7 @@ function Contact() {
           <input
             type="text"
             name="username"
-            id=""
+            id="1"
             onChange={OndataChange}
             value={messData.username}
             className="w-full py-1 px-2 bg-slate-900 border-0 text-sm"
@@ -53,7 +53,7 @@ function Contact() {
           <input
             type="email"
             name="email"
-            id=""
+            id="2"
             onChange={OndataChange}
             value={messData.email}
             className="w-full py-1 px-2 bg-slate-900 border-0 text-sm"
@@ -63,7 +63,7 @@ function Contact() {
           </label>
           <textarea
             name="message"
-            id=""
+            id="3"
             value={messData.message}
             cols="30"
             rows="10"

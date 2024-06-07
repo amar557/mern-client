@@ -62,6 +62,7 @@ function Register() {
             name="username"
             onChange={handleInput}
             required
+            id="7"
             value={registerationData.username}
             className="px-2 block mb-2 w-full outline-none p-1 text-sm bg-slate-700"
           />
@@ -73,6 +74,7 @@ function Register() {
             name="email"
             onChange={handleInput}
             required
+            id="8"
             className="block mb-2 w-full outline-none p-1 text-sm bg-slate-700 px-2"
             value={registerationData.email}
           />
@@ -84,6 +86,7 @@ function Register() {
             name="phone"
             onChange={handleInput}
             required
+            id="9"
             value={registerationData.phone}
             className="block mb-2 w-full outline-none p-1 text-sm bg-slate-700 px-2"
           />
@@ -96,6 +99,7 @@ function Register() {
             name="password"
             value={registerationData.password}
             required
+            id="10"
             className="block mb-2 w-full outline-none p-1 text-sm bg-slate-700 px-2"
           />
           <button

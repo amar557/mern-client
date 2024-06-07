@@ -52,6 +52,7 @@ function Login() {
             name="email"
             onChange={onValueChanges}
             required
+            id="5"
             className="block mb-2 w-full outline-none p-1 text-sm bg-slate-700 px-2"
             value={loginData.email}
           />
@@ -65,6 +66,7 @@ function Login() {
             name="password"
             value={loginData.password}
             required
+            id="6"
             className="block mb-2 w-full outline-none p-1 text-sm bg-slate-700 px-2"
           />
           <button
